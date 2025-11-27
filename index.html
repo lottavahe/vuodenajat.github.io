@@ -59,13 +59,13 @@
         <button onclick="vaihdaVuodenaikaa('talvi')">Talvi</button>
     </div>
 
-    <div id="imageArea" style="background-image: url('kevat.png');"></div>
+    <div id="imageArea" class="image-area" style="background-image: url('kevat.png');"></div>
 
-    /*Loin kuvat Googlen gemini tekoälyllä*/
+    
 
     <script>
         function vaihdaVuodenaikaa(season) {
-            var imageArea = document.getElementById("imageArea");
+            const imageArea = document.getElementById("imageArea");
 
             if (season === "kevat") {
                 imageArea.style.backgroundImage = "url('kevat.png')";
