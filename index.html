@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vuodenajat</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 20px 0 10px 0;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            gap: 20px;
+            padding: 15px;
+            background: #3a3939;
+        }
+
+        .navbar button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background: #555;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .navbar button:hover {
+            background: #777;
+        }
+
+        .image-area {
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vuodenajat</h1>
+
+    <div id="navbar">
+        <button onclick="vaihdaVuodenaikaa('kevat')">Kevät</button>
+        <button onclick="vaihdaVuodenaikaa('kesa')">Kesä</button>
+        <button onclick="vaihdaVuodenaikaa('syksy')">Syksy</button>
+        <button onclick="vaihdaVuodenaikaa('talvi')">Talvi</button>
+    </div>
+
+    <div id="imageArea" style="background-image: url('kevat.png');"></div>
+
+    /*Loin kuvat Googlen gemini tekoälyllä*/
+
+    <script>
+        function vaihdaVuodenaikaa(season) {
+            var imageArea = document.getElementById("imageArea");
+
+            if (season === "kevat") {
+                imageArea.style.backgroundImage = "url('kevat.png')";
+            }
+
+            else if (season === "kesa") {
+                imageArea.style.backgroundImage = "url('kesa.png')";
+            }
+
+            else if (season === "syksy") {
+                imageArea.style.backgroundImage = "url('syksy.png')";
+            }
+
+            else if (season === "talvi") {
+                imageArea.style.backgroundImage = "url('talvi.png')";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
